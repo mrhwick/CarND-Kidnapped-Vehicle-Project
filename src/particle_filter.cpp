@@ -97,7 +97,7 @@ void ParticleFilter::dataAssociation(std::vector<LandmarkObs> predicted, std::ve
 		// cout << "on observation " << i << endl;
 		LandmarkObs &o = observations.at(i);
 		o.id = -1;
-		double min_value = MAXFLOAT;
+		double min_value = std::numeric_limits<float>::infinity();;
 		// cout << "predicted.size(): " << predicted.size() << endl;
 		for (int j = 0; j < predicted.size(); j++) {
 			// cout << "on prediction " << j << endl;
